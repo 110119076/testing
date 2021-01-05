@@ -1,0 +1,42 @@
+import matplotlib.pyplot as plt
+#x=[2,4,6,8,10]
+#y=[6,7,8,2,4]
+#x1=[1,3,5,7,9]
+#y1=[7,8,2,4,2]
+#plt.bar(x,y,label='bars1',color='r')
+#plt.bar(x1,y1,label='bars2',color='b')
+#pop_ages=[22,55,62,45,21,22,34,42,42,4,99,102,110,120,121,122,130,111,115,112,85,48,75,65,54,39,76]
+#ids =[x for x in range(len(pop_ages))]
+#plt.bar(ids,pop_ages)
+#bins=[0,10,20,30,40,50,60,70,80,90,100,110,120,130]
+#plt.hist(pop_ages, bins,histtype='bar',rwidth=0.8)
+#days=[1,2,3,4,5]
+#y=[5,2,4,2,1,4,5,2]
+#sleep=[7,8,6,11,7]
+#eat=[2,3,4,3,2]
+#work=[7,8,7,2,2]
+#play=[8,5,7,8,13]
+#slices=[7,2,2,13]
+#acti=['sleep','eat','work','play']
+#cols=['c','m','r','g']
+#plt.pie(slices,labels=acti,colors=cols,startangle=90,shadow=True,explode=(0,0.1,0,0),autopct='%1.1f%%')
+#plt.plot([],[],color='m',label='sleep',linewidth=5)
+#plt.plot([],[],color='c',label='eat',linewidth=5)
+#plt.plot([],[],color='r',label='work',linewidth=5)
+#plt.plot([],[],color='k',label='play',linewidth=5)
+#plt.stackplot(days,sleep,eat,work,play,colors=['m','c','r','k'])
+#plt.scatter(x,y,label='skitscat',color='k',s=500,marker="x")
+import numpy as np
+
+x,y=np.loadtxt('example.txt',delimiter=',',unpack=True)
+#with open('example.txt','r') as csvfile:
+ #    plots=csv.reader(csvfile, delimiter=',')
+  #   for row in plots:
+ #    	x.append(int(row[0]))
+ #    	y.append(int(row[1]))
+plt.plot(x,y,label='loaded from file!')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('interesting graph\ncheck it out')
+plt.legend()
+plt.show()
